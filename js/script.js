@@ -1,3 +1,15 @@
+// fixed menu
+
+$(window).scroll(function () {
+    $scrollamount = $(window).scrollTop();
+    if ($scrollamount > 0) {
+        $(".menu").addClass("fixed");
+    }else{
+        $(".menu").removeClass("fixed");
+    }
+})
+
+
 // banner part slider js
 
 $('#banner_part').slick({
@@ -44,8 +56,16 @@ $('.venobox').venobox();
 
 
 // coutner up js
-
 $('.counter').counterUp({
     delay: 10,
-    time: 1000
+    time: 1000,
 });
+
+// over form part js
+$("nav .ctn_btn").click(function () {
+    $("#over_form").slideDown();
+})
+
+$("#over_form .close").click(function () {
+    $("#over_form").slideUp();
+})

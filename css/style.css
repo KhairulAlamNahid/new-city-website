@@ -58,8 +58,14 @@ body {
             navbar part start
 -------------------------------------------*/
 nav {
-    background: #000;
-    padding: 20px 0 !important;
+    background: ;
+    padding: 35px 0 !important;
+    transition: .5s;
+    z-index: 9999;
+    position: absolute !important;
+    top: 0; 
+    left: 0;
+    width: 100%;
 }
 
 nav ul li {
@@ -142,8 +148,205 @@ nav .join_btn .ctn_btn:hover::after {
     z-index: -1;
 }
 
+.fixed{
+    background: #000;
+    position: fixed !important;
+    padding: 15px 0 !important;
+    border-bottom: 1px solid rgba(247, 52, 53, .5);
+}
+
 /*----------------------------------------
             navbar part end
+-------------------------------------------*/
+/*----------------------------------------
+            overform part start
+-------------------------------------------*/
+#over_form {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+}
+
+#over_form .close {
+    font-size: 28px;
+    color: #f73435;
+    font-weight: 700;
+    opacity: 1;
+    cursor: pointer;
+    margin: 40px 40px 0 0;
+}
+
+#over_form .over_title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#over_form .over_title h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+#over_form .over_title h3::after {
+    background: url(../images/title_img.webp);
+    width: 527px;
+    height: 12px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+}
+
+
+#over_form .over_detail {
+    margin-top: 100px;
+}
+
+#over_form .over_detail .img img {
+    width: 100%;
+}
+
+#over_form .over_detail .name {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    transition: .3s;
+}
+
+#over_form .over_detail .form_part .name::placeholder {
+    font-size: 13px;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+#over_form .over_detail .form_part .name:focus {
+    box-shadow: 0 10px 5px rgba(247, 52, 53, 0.2);
+
+}
+
+#over_form .over_detail .form_part .textarea {
+    font-size: 14px;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: 150px;
+    resize: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-transform: capitalize;
+    border: 1px solid #ccc;
+    transition: .3s;
+}
+
+#over_form .over_detail .form_part .textarea:focus {
+    box-shadow: 0 10px 5px rgba(247, 52, 53, 0.2);
+
+}
+
+
+#over_form .over_detail .form_part h4 {
+    font-size: 15px;
+    color: #444;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#over_form .over_detail .form_part .birth_date {
+    padding: 5px 2px;
+    margin-right: 10px;
+    font-size: 15px;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+#over_form .over_detail .form_part .gen {
+    margin-top: 30px;
+}
+
+#over_form .over_detail .form_part label {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+#over_form .over_detail .form_part .rad {
+    margin-right: 5px;
+}
+
+#over_form .over_detail .form_part .over_button {
+    margin-top: 30px;
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    background-color: #222;
+    padding: 14px 36px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+}
+
+#over_form .over_detail .form_part .over_button span {
+    position: relative;
+    z-index: 1;
+}
+
+#over_form .over_detail .form_part .over_button:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 9px;
+    height: 490%;
+    width: 140%;
+    background: #f73435;
+    transition: .4s;
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+#over_form .over_detail .form_part .over_button:hover:after {
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+#over_form .over_detail .form_part .over_button.focus,
+.button:focus {
+    box-shadow: none;
+}
+
+/*----------------------------------------
+            overform part end
 -------------------------------------------*/
 /*----------------------------------------
             banner part start
@@ -168,7 +371,7 @@ nav .join_btn .ctn_btn:hover::after {
     width: 100%;
     height: 100%;
     background: rgb(0, 0, 0, .7);
-    padding: 180px 0 180px;
+    padding: 280px 0 160px;
 }
 
 #banner_part .banner .overlay h1 {
@@ -1008,7 +1211,7 @@ nav .join_btn .ctn_btn:hover::after {
     color: #f73435;
 }
 
-#contact_part .contact_us ul .icon i{
+#contact_part .contact_us ul .icon i {
     border: 1px solid #555;
     width: 35px;
     height: 33px;
